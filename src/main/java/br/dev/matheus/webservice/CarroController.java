@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CarroController {
-
     private CarroManager carro = new CarroManager();
 
     @GetMapping("api/carros")
