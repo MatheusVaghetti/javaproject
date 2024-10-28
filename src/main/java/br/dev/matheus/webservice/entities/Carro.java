@@ -1,13 +1,15 @@
-package br.dev.matheus.webservice;
+package br.dev.matheus.webservice.entities;
 
 
 public class Carro {
+    private int codigo;
     private String modelo;
     private String marca;
 
     public Carro(){
     }
-    public Carro(String modelo, String marca){
+    public Carro(int codigo, String modelo, String marca){
+        this.codigo = codigo;
         this.modelo = modelo;
         this.marca = marca;
     }
@@ -23,5 +25,12 @@ public class Carro {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+    public int getCodigo() {
+        return codigo;
+    }
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    
 
 }
