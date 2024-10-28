@@ -17,20 +17,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RestController
 @RequestMapping("/api")
 public class CarroController {
-    private final CarroManager carro = new CarroManager();
+    private final CarroManager manager = new CarroManager();
 
     @PostMapping("/carros")
     public Carro create(@RequestBody Carro carro){
-        return carro.add(carro);
+        return manager.add(carro);
     }
 
     @GetMapping("/carros")
     public List<Carro> getCarros() {
-        return carro.getCarros();
+        return manager.getCarros();
     }
 
     @DeleteMapping("/carros/{codigo}")
     public void deleteCarro(@PathVariable int codigo){
-        carro.remove(codigo);
+        manager.remove(codigo);
     }
 }
